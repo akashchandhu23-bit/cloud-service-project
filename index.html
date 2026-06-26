@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cloud Service Project</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            text-align:center;
-            background:#f5f5f5;
-            margin-top:100px;
-        }
-        h1{
-            color:#0066cc;
-        }
-        .box{
-            background:white;
-            width:500px;
-            margin:auto;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px gray;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Cloud Event Booking</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <div class="box">
-        <h1>Cloud Service Project</h1>
-        <h2>Hosted on Render Cloud Platform</h2>
-        <p>Name: Event Booking System</p>
-        <p>Status: Successfully Deployed</p>
-    </div>
+
+<header>
+
+<h1>Cloud-Based Event Booking System</h1>
+
+<p>Book your favourite events online.</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Tech Conference 2026</h2>
+
+<p>Date : July 15</p>
+
+<p>Location : Mysuru</p>
+
+<button onclick="book('Tech Conference 2026')">
+Book Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Music Festival</h2>
+
+<p>Date : August 10</p>
+
+<p>Location : Bengaluru</p>
+
+<button onclick="book('Music Festival')">
+Book Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Startup Meetup</h2>
+
+<p>Date : September 5</p>
+
+<p>Location : Hyderabad</p>
+
+<button onclick="book('Startup Meetup')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+<div class="booking">
+
+<h2>Booking Form</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="email" id="email" placeholder="Enter Email">
+
+<input type="text" id="event" readonly>
+
+<button onclick="submitBooking()">
+Confirm Booking
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

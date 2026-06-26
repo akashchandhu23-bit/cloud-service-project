@@ -1,99 +1,35 @@
-body{
+function book(eventName){
 
-font-family:Arial;
-
-background:#f4f4f4;
-
-margin:0;
+document.getElementById("event").value=eventName;
 
 }
 
-header{
+function submitBooking(){
 
-background:#0066cc;
+let name=document.getElementById("name").value;
 
-color:white;
+let email=document.getElementById("email").value;
 
-padding:20px;
+let event=document.getElementById("event").value;
 
-text-align:center;
+if(name=="" || email=="" || event==""){
 
-}
+alert("Please complete the form.");
 
-.container{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-padding:30px;
-
-flex-wrap:wrap;
+return;
 
 }
 
-.card{
+alert(
 
-background:white;
+"Booking Successful!\n\n"+
 
-width:250px;
+"Name : "+name+
 
-padding:20px;
+"\nEvent : "+event+
 
-border-radius:10px;
+"\nEmail : "+email
 
-box-shadow:0 0 10px gray;
-
-text-align:center;
-
-}
-
-button{
-
-background:#0066cc;
-
-color:white;
-
-padding:10px;
-
-border:none;
-
-cursor:pointer;
-
-border-radius:5px;
-
-}
-
-button:hover{
-
-background:#004999;
-
-}
-
-.booking{
-
-background:white;
-
-width:450px;
-
-margin:30px auto;
-
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 0 10px gray;
-
-}
-
-.booking input{
-
-width:100%;
-
-padding:10px;
-
-margin:10px 0;
+);
 
 }
